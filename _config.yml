@@ -1,0 +1,45 @@
+---
+title: Piyush Sinha
+tagline: Design & Product Leader
+description: Portfolio of Piyush Sinha - Design and Product professional
+url: "https://piyushsinha.github.io"
+baseurl: ""
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Work
+    url: /work/
+  - title: Speaking
+    url: /speaking/
+  - title: Thinking
+    url: /thinking/
+  - title: Connect
+    url: /connect/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title/
+excerpt_separator: "<!--more-->"
+future: false
+timezone: Asia/Bangkok
+
+exclude:
+  - vendor/
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+
+# Feed
+feed:
+  path: feed.xml
+

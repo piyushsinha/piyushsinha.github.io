@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Piyush Sinha - Thinking"
+permalink: /thinking/
+description: "Thinking out loud on design, product, and leadership — from the work, the field, and wherever curiosity takes me."
+---
+
+<div class="container--wide has-padding text-center" style="margin-bottom:var(--space-50)">
+  <h1>Thinking</h1>
+  <p>Out loud on design, product, and leadership — from the work, the field, and wherever curiosity takes me.</p>
+  <hr class="separator separator--wavy">
+</div>
+
+<div class="container--wide has-padding">
+  <ul style="list-style:none;padding:0;">
+    {% for post in site.posts %}
+      {% include post-card.html %}
+    {% endfor %}
+  </ul>
+
+  <hr class="separator separator--wavy" style="margin-top:var(--space-80);margin-bottom:var(--space-80)">
+</div>
