@@ -604,6 +604,9 @@ main#main-content {
   line-height: var(--leading-body);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-3);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
 }
 
 .testimonial-card__quote p {
@@ -618,6 +621,7 @@ main#main-content {
   font-size: var(--font-size-caption);
   color: var(--color-text-muted);
   line-height: 1.5;
+  text-align: left;
 }
 
 .testimonial-card__attribution strong {
@@ -824,31 +828,31 @@ main#main-content {
    ============================================ */
 
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: var(--space-7);
-  padding-bottom: var(--space-7);
+  justify-content: flex-start;
+  padding-top: calc(60px + var(--space-5)); /* nav height + breathing room */
+  padding-bottom: var(--space-6);
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 @media (min-width: 768px) {
   .hero__content {
     flex-direction: row;
     align-items: center;
-    gap: var(--space-5);
+    gap: var(--space-4);
   }
 }
 
 .hero__portrait {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
