@@ -28,8 +28,8 @@
 
   /* --- Typography Colors --- */
   --color-text-primary:   #F5F0EB; /* Warm off-white — all body text */
-  --color-text-secondary: #A89F94; /* Muted warm — labels, captions, descriptions */
-  --color-text-muted:     #5C554E; /* Deemphasized — timestamps, disabled */
+  --color-text-secondary: #C4B8AC; /* Muted warm — labels, captions, descriptions (lighter for readability) */
+  --color-text-muted:     #8A8078; /* Deemphasized — timestamps, disabled (lighter for contrast) */
 
   /* --- Structural Borders --- */
   --color-border:         #2A2D34; /* Card and section borders */
@@ -236,8 +236,8 @@ strong, b {
 
 /* --- Section spacing --- */
 .section {
-  padding-top: var(--space-7);
-  padding-bottom: var(--space-7);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
 }
 
 /* --- Horizontal rule / separator --- */
@@ -245,8 +245,8 @@ strong, b {
   border: none;
   height: 1px;
   background-color: var(--color-border);
-  margin-top: var(--space-6);
-  margin-bottom: var(--space-6);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
 }
 
 .separator--accent {
@@ -455,8 +455,8 @@ main#main-content {
    ============================================ */
 
 .site-footer {
-  padding: var(--space-6) 0;
-  margin-top: var(--space-7);
+  padding: var(--space-5) 0;
+  margin-top: var(--space-6);
   border-top: 1px solid var(--color-border-subtle);
 }
 
@@ -708,6 +708,7 @@ main#main-content {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 
 /* ============================================
@@ -764,8 +765,8 @@ main#main-content {
 }
 
 .post-card {
-  padding-top: var(--space-5);
-  padding-bottom: var(--space-5);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
@@ -779,13 +780,13 @@ main#main-content {
 
 .post-card__meta {
   font-size: var(--font-size-caption);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-1);
 }
 
 .post-card__title {
   font-size: var(--font-size-h3);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .post-card__title a {
@@ -808,13 +809,14 @@ main#main-content {
 
 /* --- Post image in card --- */
 .post-card__image {
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .post-card__image img {
   border-radius: var(--radius-sm);
-  max-height: 240px;
+  max-height: 180px;
   object-fit: cover;
+  object-position: top center;
 }
 
 /* ============================================
@@ -849,6 +851,7 @@ main#main-content {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center;
   border: 2px solid var(--color-border);
   flex-shrink: 0;
 }
