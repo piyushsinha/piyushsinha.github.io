@@ -1,8 +1,8 @@
 ---
 title: Piyush Sinha
 tagline: Design & Product Leader
-description: Portfolio of Piyush Sinha - Design and Product professional
-url: "https://piyushsinha.github.io"
+description: Portfolio of Piyush Sinha — Director/VP-level design and product leader with 14+ years across fintech, payments, travel tech, and platform SaaS in Southeast Asia.
+url: "https://piyushsinha.com"
 baseurl: ""
 
 # Navigation
@@ -43,3 +43,13 @@ exclude:
 feed:
   path: feed.xml
 
+# Social / SEO
+social:
+  name: Piyush Sinha
+  links:
+    - "https://www.linkedin.com/in/itspiyushsinha/"
+
+# Author
+author:
+  name: Piyush Sinha
+  uri: https://www.linkedin.com/in/itspiyushsinha/

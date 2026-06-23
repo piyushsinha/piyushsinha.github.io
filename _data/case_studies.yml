@@ -1,0 +1,77 @@
+- id: intro-deck
+  type: intro
+  title: "Leadership Introduction"
+  subtitle: "Career overview, domain depth, and leadership philosophy"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vQ4vrWe_6dwuQWUG872_Q78voFEOHuQa8A3FguSSH3Dj-KMviO9YzX2mU7wye6o3cBmrC2p-MiM1iLM/pubembed?start=false&loop=false&delayms=60000"
+
+- id: agoda-5mm
+  type: case-study
+  order: 1
+  company: "Agoda"
+  title: "Unlocking $5MM in Annual Cost Savings"
+  outcome: "$5MM annual cost savings identified through field research"
+  domain: "Hotel Partner Products · Contextual Inquiry"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vQvujDXx15CxN3ahETtdlXWuT96JfJGEQtJaI6lZzwwrU2Ms5L_4rHynuthSHxhPnDOjVVZZREaUu6a/pubembed?start=false&loop=false&delayms=60000"
+
+- id: xendit-golive
+  type: case-study
+  order: 2
+  company: "Xendit"
+  title: "Revamping the Go-Live Process"
+  outcome: "Sign-up to live in 14 days — 2x faster than 30-day target"
+  domain: "Payments Onboarding · Process Design"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRErYT8qrvW40rL6ya5Avafhuw1YicQFKvW0kJKpTzKmDPTPJAfCl8opQskXruWZkdaDiGWpiCHVzMR/pubembed?start=false&loop=false&delayms=60000"
+
+- id: agoda-hidden-behaviors
+  type: case-study
+  order: 3
+  company: "Agoda"
+  title: "Discovering Hidden Behaviors"
+  outcome: "Novel research methodology uncovering unobservable user behavior"
+  domain: "UX Research · Behavioral Methods"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRhuKEwxTkW6zWcuVZvlogK4BLAbHjPaZ0I7OMM0MLgY1zV1Mx8tVjOUSqnEWywK542w0_vXDjtoZA7/pubembed?start=false&loop=false&delayms=60000"
+
+- id: brankas-tap
+  type: case-study
+  order: 4
+  company: "Brankas"
+  title: "Brankas Tap — Trust in Open Finance"
+  outcome: "53% improvement in customer onboarding across 15 countries"
+  domain: "B2B2C · Payment Authentication · Trust Design"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRKc0QnweoGn8ZlZKYKBim4CsI9I7cmmhfggYzS0MgrG6DiMJ3SXvDTWXUOlkBbLsGKlci77NRrg7im/pubembed?start=false&loop=false&delayms=60000"
+
+- id: agoda-booking-form
+  type: case-study
+  order: 5
+  company: "Agoda"
+  title: "Booking Form Experiment Programme"
+  outcome: "Systematic A/B testing programme driving continuous conversion gains"
+  domain: "Consumer Product · Experimentation"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vQfFsA1FMajxyT1LlIuzNe_fv8nQ_3NsbEdgcCnxJarObtznCvxGOKA-d_MNQ0AoyJjzTjZTlSV1Zsp/pubembed?start=false&loop=false&delayms=60000"
+
+- id: agoda-hcd
+  type: case-study
+  order: 6
+  company: "Agoda"
+  title: "Introducing HCD to a Fortune 100 Corporation"
+  outcome: "100% of customer-facing teams adopting HCD in 4 months"
+  domain: "Org Culture Change · Design Leadership"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vT5jkJZ3ryA4JoAwvZ-EQxXENtL2H2x8C93gyDJx-zSr4jM2LaeBRO2RRTjeDqH4arnfmyhplJaR8-0/pubembed?start=false&loop=false&delayms=60000"
+
+- id: xendit-xendesign
+  type: case-study
+  order: 7
+  company: "Xendit"
+  title: "XenDesign — A Design System for the Group"
+  outcome: "50% reduction in design & engineering cost across 4 companies"
+  domain: "Design Systems · Multi-brand Architecture"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vTngwLbkSj2g7-n2KLh7yiACsAfqXFCp2F6wI-zqpdkwdkDSxoCMJtLphqvvGIXMndkdySJ8O0BrkRf/pubembed?start=false&loop=false&delayms=60000"
+
+- id: uxhh-bangkok
+  type: case-study
+  order: 8
+  company: "UX Happy Hour Bangkok"
+  title: "Building a Community from Scratch"
+  outcome: "1,700+ members across 10 years of monthly events"
+  domain: "Community Building · Design Culture"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vSlU52qvIOi4t4z5Of7baZjEa7WHTaVTJHDxqlgo5iCukqvpNezW5lm-gklpjAeMAcT6-FY9lFVwsH_/pubembed?start=false&loop=false&delayms=60000"

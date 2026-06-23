@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  {% include head.html %}
 </head>
 <body>
-  {% include header.html %}
-  <main id="main-content" class="container">
+  {% include nav.html %}
+  <main id="main-content">
     {{ content }}
   </main>
   {% include footer.html %}
+
+  <script>
+    // Nav scroll behavior: solid background on scroll
+    (function() {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+
+      function onScroll() {
+        if (window.scrollY > 10) {
+          header.classList.add('site-header--scrolled');
+        } else {
+          header.classList.remove('site-header--scrolled');
+        }
+      }
+
+      // Throttle scroll events
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            onScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Initial check
+      onScroll();
+    })();
+  </script>
 </body>
 </html>

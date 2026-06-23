@@ -1,4 +1,4 @@
-<header class="site-header container--wide">
+<header class="site-header">
   <div class="site-header__inner">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
@@ -7,6 +7,7 @@
       <span></span>
       <span></span>
     </label>
+    <div class="nav__overlay"></div>
     <ul class="nav__list" role="navigation" aria-label="Main navigation">
       {% for item in site.nav %}
         {% assign is_current = false %}
