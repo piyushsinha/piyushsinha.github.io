@@ -14,13 +14,36 @@ description: "Case studies and design work samples from fintech, payments, trave
       <p>Selected case studies and work samples. A lot of my work can't be shared publicly due to NDA constraints — get in touch to discuss specific engagements.</p>
     </div>
 
+    <!-- Table of Contents -->
+    {% assign all_studies = site.data.case_studies %}
+    <nav class="work-toc">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Title</th>
+            <th scope="col">Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for study in all_studies %}
+          <tr>
+            <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.company | default: "Introduction" }}</a></td>
+            <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.title }}</a></td>
+            <td><span class="work-toc__desc">{{ study.outcome | default: study.subtitle }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </nav>
+
     <!-- Leadership Intro Deck -->
     {% assign intro = site.data.case_studies | where: "type", "intro" | first %}
     {% if intro %}
-      <div class="work-section-label">
+      <div class="work-section-label" style="margin-top: var(--space-6);">
         <span class="label">Introduction</span>
       </div>
-      <div class="embed-frame embed-frame--tall" style="margin-bottom: var(--space-6);">
+      <div id="{{ intro.id }}" class="embed-frame embed-frame--tall" style="margin-bottom: var(--space-6);">
         <iframe src="{{ intro.embed_url }}" loading="lazy" allowfullscreen></iframe>
       </div>
     {% endif %}
@@ -30,17 +53,7 @@ description: "Case studies and design work samples from fintech, payments, trave
       <span class="label">Case Studies</span>
     </div>
 
-    <!-- Table of Contents -->
-    <nav class="work-toc">
-      {% assign case_studies = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
-      {% for study in case_studies %}
-        <a href="#{{ study.id }}" class="work-toc__item">
-          <span class="work-toc__company">{{ study.company }}</span>
-          <span class="work-toc__title">{{ study.title }}</span>
-        </a>
-      {% endfor %}
-    </nav>
-
+    {% assign case_studies = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
     {% for study in case_studies %}
       <div class="case-study-card" id="{{ study.id }}">
         <div class="case-study-card__header">

@@ -18,27 +18,21 @@ description: "Thinking out loud on design, product, and leadership — from the 
         <ul class="post-card-list">
           {% for post in site.posts %}
             <li class="post-card">
-              <div class="columns">
-                {% if post.image %}
-                <div class="column" style="flex-basis: 40%; min-width: 180px;">
-                  <figure class="post-card__image featured-image" style="aspect-ratio: 4/5; width: 100%; border: none; box-shadow: none;">
-                    <a href="{{ post.url | relative_url }}">
-                      <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm);" decoding="async">
-                    </a>
-                  </figure>
-                </div>
-                {% endif %}
-                <div class="column" style="flex-basis: {% if post.image %}60{% else %}100{% endif %}%;">
-                  <h3 class="post-card__title" style="margin-top: 0;">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                  </h3>
-                  {% if post.description %}
-                    <div class="post-card__excerpt">
-                      <p>{{ post.description | truncate: 200 }}</p>
-                    </div>
-                  {% endif %}
-                </div>
+              {% if post.image %}
+              <div class="post-card__image-wrapper">
+                <a href="{{ post.url | relative_url }}">
+                  <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="post-card__thumb" decoding="async">
+                </a>
               </div>
+              {% endif %}
+              <h2 class="post-card__title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h2>
+              {% if post.description %}
+                <div class="post-card__excerpt">
+                  <p>{{ post.description | truncate: 240 }}</p>
+                </div>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
