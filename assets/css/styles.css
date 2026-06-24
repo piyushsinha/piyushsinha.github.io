@@ -993,8 +993,8 @@ main#main-content {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: var(--color-accent-subtle);
-  border: 1px solid var(--color-accent-action);
+  background-color: #1E1A14; /* subtle gold-tinted bg */
+  border: 1px solid var(--color-accent-metric);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
   margin-bottom: var(--space-5);
@@ -1004,12 +1004,12 @@ main#main-content {
   font-family: var(--font-mono);
   font-size: clamp(16px, 2.5vw, 20px);
   font-weight: var(--weight-semibold);
-  color: var(--color-accent-action) !important;
+  color: var(--color-accent-metric) !important;
   text-decoration: none !important;
 }
 
 .connect-email-cta a:hover {
-  color: var(--color-accent-hover) !important;
+  color: var(--color-accent-highlight) !important;
 }
 
 /* ============================================

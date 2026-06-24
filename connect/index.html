@@ -14,8 +14,20 @@ description: "Get in touch for work, mentorship, or general chat"
 
     <!-- Email CTA -->
     <div class="connect-email-cta" style="margin-top: var(--space-4);">
-      <a href="mailto:hello@piyushsinha.com">hello@piyushsinha.com</a>
+      <a id="email-link" href="#">
+        <span class="email-part">hello</span><span class="email-at">@</span><span class="email-part">piyushsinha</span><span>.com</span>
+      </a>
     </div>
+
+    <script>
+      (function() {
+        var parts = document.querySelectorAll('#email-link .email-part');
+        var at = document.querySelector('#email-link .email-at');
+        var domainExt = document.querySelector('#email-link span:last-child');
+        var email = parts[0].textContent + at.textContent + parts[1].textContent + domainExt.textContent;
+        document.getElementById('email-link').setAttribute('href', 'mailto:' + email);
+      })();
+    </script>
 
     <!-- Connect Links -->
     <ul class="connect-list" style="margin-top: var(--space-5);">
