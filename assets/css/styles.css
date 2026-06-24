@@ -813,7 +813,7 @@ main#main-content {
 
 /* --- Post image in card --- */
 .post-card__image {
-  margin-bottom: var(--space-2);
+  margin-bottom: 0;
 }
 
 .post-card__image img {
@@ -821,6 +821,25 @@ main#main-content {
   max-height: 180px;
   object-fit: cover;
   object-position: top center;
+}
+
+/* --- Columns layout (Thinking page) --- */
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .columns {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+  }
+}
+
+.column {
+  flex: 1;
 }
 
 /* ============================================
@@ -914,6 +933,61 @@ main#main-content {
 
 .work-section-label {
   margin-bottom: var(--space-4);
+}
+
+/* --- Work Table of Contents --- */
+.work-toc {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.work-toc__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+  margin-right: calc(-1 * var(--space-2));
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  color: var(--color-text-primary) !important;
+  transition: background-color var(--transition-fast);
+}
+
+.work-toc__item:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.work-toc__company {
+  font-size: var(--font-size-caption);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-metric);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.work-toc__title {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.work-toc__item:hover .work-toc__title {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .work-toc__item {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .work-toc__title {
+    font-size: var(--font-size-caption);
+  }
 }
 
 .case-study-card {

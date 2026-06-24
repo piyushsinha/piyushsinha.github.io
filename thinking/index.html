@@ -29,10 +29,7 @@ description: "Thinking out loud on design, product, and leadership — from the 
                 </div>
                 {% endif %}
                 <div class="column" style="flex-basis: {% if post.image %}60{% else %}100{% endif %}%;">
-                  <div class="post-card__meta">
-                    {{ post.date | date: "%B %d, %Y" }}{% if post.readtime %} · {{ post.readtime }} min read{% endif %}
-                  </div>
-                  <h3 class="post-card__title">
+                  <h3 class="post-card__title" style="margin-top: 0;">
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                   </h3>
                   {% if post.description %}

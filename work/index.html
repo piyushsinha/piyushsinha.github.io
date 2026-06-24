@@ -30,9 +30,19 @@ description: "Case studies and design work samples from fintech, payments, trave
       <span class="label">Case Studies</span>
     </div>
 
-    {% assign case_studies = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
+    <!-- Table of Contents -->
+    <nav class="work-toc">
+      {% assign case_studies = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
+      {% for study in case_studies %}
+        <a href="#{{ study.id }}" class="work-toc__item">
+          <span class="work-toc__company">{{ study.company }}</span>
+          <span class="work-toc__title">{{ study.title }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+
     {% for study in case_studies %}
-      <div class="case-study-card">
+      <div class="case-study-card" id="{{ study.id }}">
         <div class="case-study-card__header">
           <span class="label case-study-card__company">{{ study.company }}</span>
           <h3 class="case-study-card__title">{{ study.title }}</h3>
