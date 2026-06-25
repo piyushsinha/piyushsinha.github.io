@@ -794,12 +794,12 @@ main#main-content {
   to { transform: translateX(-50%); }
 }
 
-/* Fixed-size box per logo — equal visual footprint, original colors */
+/* Fixed-size box per logo — equal visual footprint */
 .logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
+  width: 160px;
   height: 48px;
   flex-shrink: 0;
 }
@@ -808,11 +808,20 @@ main#main-content {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%) brightness(2);
+  /* Force uniform light gray regardless of original fill color */
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.35;
+  transition: filter var(--transition-base), opacity var(--transition-base);
+}
+
+.logos-row__track img:hover {
+  /* White on hover */
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
   .logo-box {
+    width: 180px;
     height: 56px;
   }
 }
