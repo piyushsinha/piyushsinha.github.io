@@ -19,23 +19,6 @@ description: "Design and product leader with 14+ years across fintech, payments,
     </div>
   </div>
 </section>
-
-<!-- Metrics Strip -->
-<section class="section">
-  <div class="container">
-    <h2>My Impact</h2>
-    <hr class="separator separator--accent">
-    <div class="metrics-grid">
-      {% for metric in site.data.metrics %}
-        <div class="metric-card">
-          <span class="metric-number metric-card__number">{{ metric.number }}</span>
-          <span class="caption metric-card__label">{{ metric.label }}</span>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- Logos Marquee — after My Impact -->
 <section class="logos-section">
   <div class="container logos-section__header">
@@ -78,6 +61,24 @@ description: "Design and product leader with 14+ years across fintech, payments,
     </div>
   </div>
 </section>
+
+<!-- Metrics Strip -->
+<section class="section">
+  <div class="container">
+    <h2>My Impact</h2>
+    <hr class="separator separator--accent">
+    <div class="metrics-grid">
+      {% for metric in site.data.metrics %}
+        <div class="metric-card">
+          <span class="metric-number metric-card__number">{{ metric.number }}</span>
+          <span class="caption metric-card__label">{{ metric.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
 
 <!-- About Section -->
 <section class="section">
