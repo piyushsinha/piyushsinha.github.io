@@ -37,7 +37,7 @@
   order: 4
   company: "Brankas"
   title: "Brankas Tap — Trust in Open Finance"
-  outcome: "53% improvement in customer onboarding across 15 countries"
+  outcome: "Scaling Open Finance payment trust: How root-cause research slashed checkout drop-off to <2% and guided high-level product sunsetting decisions"
   domain: "B2B2C · Payment Authentication · Trust Design"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vT5jkJZ3ryA4JoAwvZ-EQxXENtL2H2x8C93gyDJx-zSr4jM2LaeBRO2RRTjeDqH4arnfmyhplJaR8-0/pubembed?start=false&loop=false&delayms=60000"
 
@@ -81,6 +81,7 @@
 
 - id: adplist-keynote
   type: talk
+  event: "ADP List Bangkok Launch"
   title: "Keynote Talk: Employee Inc - Build your career like a business"
   subtitle: "My keynote talk at the ADP List Bangkok inaugural event"
   domain: "Career overview, mentorship"
