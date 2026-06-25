@@ -808,6 +808,7 @@ main#main-content {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  filter: grayscale(100%) brightness(2);
 }
 
 @media (min-width: 768px) {
