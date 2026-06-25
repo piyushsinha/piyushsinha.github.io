@@ -14,64 +14,155 @@ description: "Case studies and design work samples from fintech, payments, trave
       <p>Selected case studies and work samples. A lot of my work can't be shared publicly due to NDA constraints — get in touch to discuss specific engagements.</p>
     </div>
 
-    <!-- Table of Contents -->
-    {% assign all_studies = site.data.case_studies %}
+    <!-- Table of Contents — Split by category -->
     <nav class="work-toc">
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Company</th>
-            <th scope="col">Title</th>
-            <th scope="col">Outcome</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for study in all_studies %}
-          <tr>
-            <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.company | default: "Introduction" }}</a></td>
-            <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.title }}</a></td>
-            <td><span class="work-toc__desc">{{ study.outcome | default: study.subtitle }}</span></td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+
+      <!-- Introduction -->
+      {% assign intro_items = site.data.case_studies | where: "type", "intro" %}
+      {% if intro_items.size > 0 %}
+        <div class="work-toc__section">
+          <h2 class="work-toc__heading">Introduction</h2>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in intro_items %}
+              <tr>
+                <td><a href="#{{ item.id }}" class="work-toc__link">{{ item.title }}</a></td>
+                <td><span class="work-toc__desc">{{ item.outcome | default: item.subtitle }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+
+      <!-- Case Studies -->
+      {% assign case_study_items = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
+      {% if case_study_items.size > 0 %}
+        <div class="work-toc__section">
+          <h2 class="work-toc__heading">Case Studies</h2>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Title</th>
+                <th scope="col">Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for study in case_study_items %}
+              <tr>
+                <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.company }}</a></td>
+                <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.title }}</a></td>
+                <td><span class="work-toc__desc">{{ study.outcome }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+
+      <!-- Talks & Presentations -->
+      {% assign talk_items = site.data.case_studies | where: "type", "talk" | sort: "order" %}
+      {% if talk_items.size > 0 %}
+        <div class="work-toc__section">
+          <h2 class="work-toc__heading">Talks &amp; Presentations</h2>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Event</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for talk in talk_items %}
+              <tr>
+                <td><a href="#{{ talk.id }}" class="work-toc__link">{{ talk.company }}</a></td>
+                <td><a href="#{{ talk.id }}" class="work-toc__link">{{ talk.title }}</a></td>
+                <td><span class="work-toc__desc">{{ talk.outcome | default: talk.subtitle }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+
     </nav>
 
-    <!-- Leadership Intro Deck -->
-    {% assign intro = site.data.case_studies | where: "type", "intro" | first %}
-    {% if intro %}
+    <!-- Embedded Decks — by category -->
+    {% assign all_items = site.data.case_studies | sort: "order" %}
+
+    <!-- Introduction Decks -->
+      {% for item in intro_items %}
+        <div class="work-section-label" style="margin-top: var(--space-6);">
+          <span class="label">Introduction</span>
+        </div>
+        <div id="{{ item.id }}" class="embed-frame embed-frame--tall" style="margin-bottom: var(--space-6);">
+          <iframe src="{{ item.embed_url }}" loading="lazy" allowfullscreen></iframe>
+        </div>
+      {% endfor %}
+
+    <!-- Case Study Cards -->
+    {% if case_study_items.size > 0 %}
       <div class="work-section-label" style="margin-top: var(--space-6);">
-        <span class="label">Introduction</span>
+        <span class="label">Case Studies</span>
       </div>
-      <div id="{{ intro.id }}" class="embed-frame embed-frame--tall" style="margin-bottom: var(--space-6);">
-        <iframe src="{{ intro.embed_url }}" loading="lazy" allowfullscreen></iframe>
-      </div>
-    {% endif %}
 
-    <!-- Case Studies -->
-    <div class="work-section-label" style="margin-top: var(--space-6);">
-      <span class="label">Case Studies</span>
-    </div>
-
-    {% assign case_studies = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
-    {% for study in case_studies %}
-      <div class="case-study-card" id="{{ study.id }}">
-        <div class="case-study-card__header">
-          <span class="label case-study-card__company">{{ study.company }}</span>
-          <h3 class="case-study-card__title">{{ study.title }}</h3>
-          <p class="case-study-card__outcome">{{ study.outcome }}</p>
-          <div class="pill-list case-study-card__domain">
-            {% assign domains = study.domain | split: "·" %}
-            {% for d in domains %}
-              <span class="pill">{{ d | strip }}</span>
-            {% endfor %}
+      {% for study in case_study_items %}
+        <div class="case-study-card" id="{{ study.id }}">
+          <div class="case-study-card__header">
+            <span class="label case-study-card__company">{{ study.company }}</span>
+            <h3 class="case-study-card__title">{{ study.title }}</h3>
+            <p class="case-study-card__outcome">{{ study.outcome }}</p>
+            <div class="pill-list case-study-card__domain">
+              {% assign domains = study.domain | split: "·" %}
+              {% for d in domains %}
+                <span class="pill">{{ d | strip }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="embed-frame">
+            <iframe src="{{ study.embed_url }}" loading="lazy" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="embed-frame">
-          <iframe src="{{ study.embed_url }}" loading="lazy" allowfullscreen></iframe>
-        </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- Talk Cards -->
+    {% if talk_items.size > 0 %}
+      <div class="work-section-label" style="margin-top: var(--space-6);">
+        <span class="label">Talks &amp; Presentations</span>
       </div>
-    {% endfor %}
+
+      {% for talk in talk_items %}
+        <div class="case-study-card" id="{{ talk.id }}">
+          <div class="case-study-card__header">
+            <span class="label case-study-card__company">{{ talk.company }}</span>
+            <h3 class="case-study-card__title">{{ talk.title }}</h3>
+            {% if talk.outcome %}
+              <p class="case-study-card__outcome">{{ talk.outcome }}</p>
+            {% endif %}
+            {% if talk.domain %}
+              <div class="pill-list case-study-card__domain">
+                {% assign domains = talk.domain | split: "·" %}
+                {% for d in domains %}
+                  <span class="pill">{{ d | strip }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          <div class="embed-frame">
+            <iframe src="{{ talk.embed_url }}" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
 
   </div>
 </section>
