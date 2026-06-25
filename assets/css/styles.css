@@ -757,16 +757,13 @@ main#main-content {
 }
 
 /* ============================================
-   COMPONENTS — Post Cards (Thinking)
+   COMPONENTS — Post Cards (Thinking) — Stacked, Shanti-style
    ============================================ */
 
 .post-card-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .post-card {
@@ -774,21 +771,35 @@ main#main-content {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
+  transition: border-color var(--transition-base);
 }
 
-.post-card__image-wrapper {
-  margin-bottom: var(--space-3);
+.post-card:hover {
+  border-color: var(--color-border-subtle);
 }
 
-.post-card__meta {
-  font-size: var(--font-size-caption);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-1);
+/* --- Featured image (full-width, stacked on top) --- */
+.post-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background-color: var(--color-bg-tertiary);
+}
+
+.post-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Content area (below image) --- */
+.post-card__content {
+  padding: var(--space-4);
 }
 
 .post-card__title {
   font-size: var(--font-size-h3);
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
 }
 
 .post-card__title a {
@@ -803,30 +814,35 @@ main#main-content {
 .post-card__excerpt {
   color: var(--color-text-secondary);
   font-size: var(--font-size-body);
+  line-height: var(--leading-body);
 }
 
 .post-card__excerpt p {
-  margin-bottom: 0;
+  margin-bottom: var(--space-2);
 }
 
-/* --- Post thumbnail (Thinking page) --- */
-.post-card__thumb {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  object-fit: cover;
+.post-card__date {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
 }
 
-/* --- Card padding for content area --- */
-.post-card__title,
-.post-card__excerpt {
-  padding-left: var(--space-3);
-  padding-right: var(--space-3);
+/* --- Columns layout (retained for other pages) --- */
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
-.post-card__excerpt {
-  padding-bottom: var(--space-3);
+@media (min-width: 768px) {
+  .columns {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}
+
+.column {
+  flex: 1;
 }
 
 /* ============================================
@@ -931,48 +947,97 @@ main#main-content {
   margin-bottom: var(--space-6);
 }
 
-.work-toc__item {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-2);
-  margin-left: calc(-1 * var(--space-2));
-  margin-right: calc(-1 * var(--space-2));
-  border-radius: var(--radius-sm);
-  text-decoration: none !important;
-  color: var(--color-text-primary) !important;
-  transition: background-color var(--transition-fast);
+.work-toc table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.work-toc__item:hover {
-  background-color: var(--color-bg-tertiary);
-}
-
-.work-toc__company {
+.work-toc thead th {
   font-size: var(--font-size-caption);
   font-weight: var(--weight-medium);
-  color: var(--color-accent-metric);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.work-toc__title {
+.work-toc thead th:first-child,
+.work-toc tbody td:first-child {
+  width: 140px;
+  min-width: 100px;
+}
+
+.work-toc tbody tr {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.work-toc tbody tr:last-child {
+  border-bottom: none;
+}
+
+.work-toc tbody td {
+  padding: var(--space-2) var(--space-2);
+  vertical-align: middle;
+}
+
+.work-toc__link {
+  color: var(--color-text-primary) !important;
+  text-decoration: none !important;
   font-size: var(--font-size-body);
+  transition: color var(--transition-fast);
+}
+
+.work-toc__link:hover {
+  color: var(--color-accent-action) !important;
+}
+
+.work-toc__desc {
+  font-size: var(--font-size-caption);
   color: var(--color-text-secondary);
 }
 
-.work-toc__item:hover .work-toc__title {
-  color: var(--color-text-primary);
-}
-
 @media (max-width: 767px) {
-  .work-toc__item {
-    flex-direction: column;
-    gap: 0;
+  .work-toc table,
+  .work-toc thead,
+  .work-toc tbody,
+  .work-toc th,
+  .work-toc td,
+  .work-toc tr {
+    display: block;
   }
 
-  .work-toc__title {
+  .work-toc thead {
+    display: none;
+  }
+
+  .work-toc tbody tr {
+    padding: var(--space-3) var(--space-2);
+    margin-bottom: var(--space-2);
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+    border-bottom: none;
+  }
+
+  .work-toc tbody td {
+    padding: var(--space-1) 0;
+  }
+
+  .work-toc tbody td:first-child {
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .work-toc tbody td:first-child .work-toc__link {
+    font-size: var(--font-size-caption);
+    color: var(--color-accent-metric) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--weight-medium);
+  }
+
+  .work-toc__desc {
     font-size: var(--font-size-caption);
   }
 }
