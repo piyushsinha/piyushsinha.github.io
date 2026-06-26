@@ -59,7 +59,7 @@ description: "Case studies and design work samples from fintech, payments, trave
               <tr>
                 <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.company }}</a></td>
                 <td><a href="#{{ study.id }}" class="work-toc__link">{{ study.title }}</a></td>
-                <td><span class="work-toc__desc">{{ study.outcome }}</span></td>
+                <td><span class="work-toc__desc">{{ study.outcome | replace: '\n', '' }}</span></td>
               </tr>
               {% endfor %}
             </tbody>
@@ -119,7 +119,7 @@ description: "Case studies and design work samples from fintech, payments, trave
           <div class="case-study-card__header">
             <span class="label case-study-card__company">{{ study.company }}</span>
             <h3 class="case-study-card__title">{{ study.title }}</h3>
-            <p class="case-study-card__outcome">{{ study.outcome }}</p>
+            <p class="case-study-card__outcome">{{ study.outcome | replace: '\n', '' }}</p>
             <div class="pill-list case-study-card__domain">
               {% assign domains = study.domain | split: "·" %}
               {% for d in domains %}

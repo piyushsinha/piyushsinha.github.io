@@ -11,7 +11,8 @@ description: "Design and product leader with 14+ years across fintech, payments,
     <img class="hero__portrait" fetchpriority="high" decoding="async" width="160" height="160" src="{{ '/assets/images/piyush-portrait.jpeg' | relative_url }}" alt="Piyush Sinha portrait photo">
     <div class="hero__text">
       <h1 class="hero__name">I'm Piyush.</h1>
-      <p class="hero__tagline">I build design organizations, research functions, and product strategies that deliver measurable outcomes — across <span class="text-highlight">fintech, payments, travel, and platform SaaS</span> in Southeast Asia and globally.</p>
+      <h3 class="hero__tagline">I build the teams — and the products — that turn confusing money into simple money.</h3>
+      <p class="hero__tagline">For 14 years, I've walked into companies where the product didn't work, the team had no system, or the customer didn't trust the brand. I walked out having fixed all three. <span class="text-highlight">Fintech. Payments. Travel. Platform SaaS.</span> Southeast Asia, and beyond.</p>
       <div class="hero__ctas">
         <a href="{{ '/work/' | relative_url }}" class="btn btn--primary">View My Work</a>
         <a href="{{ '/connect/' | relative_url }}" class="btn btn--ghost">Connect</a>
@@ -81,14 +82,13 @@ description: "Design and product leader with 14+ years across fintech, payments,
   <div class="container">
     <h2>My Impact</h2>
     <hr class="separator separator--accent">
-    <div class="metrics-grid">
-      {% for metric in site.data.metrics %}
-        <div class="metric-card">
-          <span class="metric-number metric-card__number">{{ metric.number }}</span>
-          <span class="caption metric-card__label">{{ metric.label }}</span>
-        </div>
-      {% endfor %}
-    </div>
+    <ul class="impact-list">
+      <li>I saved Agoda $5MM a year — by talking to the people running hotels, not the people running dashboards.</li>
+      <li>I cut Brankas' onboarding time in half — and trust went up, not down.</li>
+      <li>I took Xendit live in 14 days. The target was 30.</li>
+      <li>I grew a design org from 1 to 20+ — and it still ran like a team of 5.</li>
+      <li>I shipped one platform across 5 regions — without 5 different versions of the truth.</li>
+    </ul>
   </div>
 </section>
 
@@ -99,7 +99,7 @@ description: "Design and product leader with 14+ years across fintech, payments,
   <div class="container about-section__text">
     <h2>About</h2>
     <hr class="separator separator--accent">
-    <p>I'm a design and product leader with 14+ years of experience building and scaling teams, research functions, and platforms across Southeast Asia. I've led design organisations of 20+ people, built UX research functions from scratch, and owned product strategy across multiple markets — at companies ranging from Agoda (Booking Holdings) and Xendit (YC S15) to regulated financial institutions across the region.</p>
+    <p>I'm a design and product leader who's spent the last 14 years building the function before the function existed — first UX hire at Agoda, first Head of UX at a fast-growing fintech, founder of my own consultancy serving central banks and Fortune 100s. I've led orgs of 20+, built research practices from zero, and shipped products across more markets than most people visit in a lifetime.</p>
     <p>Currently Director of Digital Experience at PouchNATION.</p>
     <p><strong>Open to Director and VP-level roles in design, UX research, product, or operational leadership.</strong></p>
     <p><strong>Based in Bangkok. Open to remote or relocation with visa sponsorship.</strong></p>
@@ -132,9 +132,9 @@ description: "Design and product leader with 14+ years across fintech, payments,
 <!-- CTA Section -->
 <section class="section">
   <div class="container">
-    <h2>Want To Work Together?</h2>
+    <h2>Want to build something that actually works?</h2>
     <hr class="separator separator--accent">
-    <p>I am currently exploring senior leadership opportunities.</p>
+    <p>I'm currently exploring senior leadership roles — the kind where someone hands me a hard, half-broken thing and says "fix it."</p>
     <a href="{{ '/connect/' | relative_url }}" class="btn btn--primary">Connect With Me</a>
   </div>
 </section>
