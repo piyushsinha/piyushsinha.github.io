@@ -2,38 +2,46 @@
 layout: default
 title: "Piyush Sinha - Connect"
 permalink: /connect/
-description: "Get in touch for work, mentorship, or general chat"
+description: "Get in touch about Director and VP-level product, experience, design, or transformation roles — across APAC, the EU, the UAE, or fully remote."
 ---
 
 <section class="section">
   <div class="container">
     <!-- Page Header -->
-    <h1>Let's Talk</h1>
+    <h1>Let's talk.</h1>
     <hr class="separator separator--accent">
-    <p>If you're hiring for a Director or VP-level design, research, or product role — this is the easiest message you'll send all week.</p>
+    <p>If you're hiring for a Director or VP-level product, experience, design, or transformation role — this is the easiest message you'll send all week.</p>
 
-    <!-- Email CTA -->
+    <!-- Email CTA (assembled in JS so scrapers can't harvest it) -->
     <div class="connect-email-cta" style="margin-top: var(--space-4);">
       <a id="email-link" href="#">
-        <span class="email-part">hello</span><span class="email-at">@</span><span class="email-part">piyushsinha</span><span>.com</span>
+        <span class="email-part">hireme</span><span class="email-at">@</span><span class="email-part">piyushsinha</span><span>.com</span>
       </a>
     </div>
 
     <script>
-      (function() {
-        var parts = document.querySelectorAll('#email-link .email-part');
-        var at = document.querySelector('#email-link .email-at');
-        var domainExt = document.querySelector('#email-link span:last-child');
-        var email = parts[0].textContent + at.textContent + parts[1].textContent + domainExt.textContent;
-        document.getElementById('email-link').setAttribute('href', 'mailto:' + email);
+      (function () {
+        var link = document.getElementById('email-link');
+        if (!link) return;
+        var parts = link.querySelectorAll('.email-part');
+        var at = link.querySelector('.email-at');
+        var ext = link.querySelector('span:last-child');
+        var email = parts[0].textContent + at.textContent + parts[1].textContent + ext.textContent;
+        link.setAttribute('href', 'mail' + 'to:' + email);
       })();
     </script>
 
+    <!-- Availability -->
+    <div class="hero__status" style="margin-top: var(--space-4);">
+      <strong class="text-highlight">Open to Director / VP roles</strong> — product, experience, design-org, or transformation, in fintech, payments, travel, and platform SaaS.<br><br>
+      Open across <strong>APAC, the EU, and the UAE</strong> — or fully remote. Indian citizen; open to visa sponsorship, EOR, or a B2B contract for remote engagements.
+    </div>
+
     <!-- Connect Links -->
     <ul class="connect-list" style="margin-top: var(--space-5);">
-      <li class="connect-list__item"><strong>Work enquiries</strong> → <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li class="connect-list__item"><strong>Mentorship</strong> → <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a> (I've stepped away from ADPList, but I haven't stepped away from mentoring)</li>
-      <li class="connect-list__item"><strong>Just want to talk shop</strong> → <a href="https://twitter.com/piyushsinha" target="_blank" rel="noopener">X / Twitter</a> or <a href="https://lunchclub.com/?invite_code=piyushs4" target="_blank" rel="noopener">LunchClub</a></li>
+      <li class="connect-list__item"><strong>Work enquiries</strong> &rarr; <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li class="connect-list__item"><strong>Mentorship</strong> &rarr; <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a> (I've stepped away from ADPList, but I haven't stepped away from mentoring)</li>
+      <li class="connect-list__item"><strong>Just want to talk shop</strong> &rarr; <a href="https://twitter.com/piyushsinha" target="_blank" rel="noopener">X / Twitter</a> or <a href="https://lunchclub.com/?invite_code=piyushs4" target="_blank" rel="noopener">LunchClub</a></li>
       <li class="connect-list__item text-muted" style="font-size: var(--font-size-caption);">One note: I keep Facebook and Instagram for close friends and family only — so please don't send connection requests there. Everything else above, I'd genuinely love to hear from you.</li>
     </ul>
 
