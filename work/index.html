@@ -20,10 +20,10 @@ description: "Case studies from fintech, payments, travel tech, and platform Saa
 
     <!-- Case Study Cards -->
     {% if case_study_items.size > 0 %}
-      <div class="case-grid" style="margin-top: var(--space-5);">
+      <div class="case-grid case-grid--two" style="margin-top: var(--space-5);">
         {% for study in case_study_items %}
           <article class="case-tile">
-            <span class="case-tile__label">{{ study.company }}</span>
+            <span class="case-tile__label">{{ study.company }}{% if study.page %} · Full case study{% endif %}</span>
             <h2 class="case-tile__title">
               {% if study.page %}
                 <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
@@ -31,7 +31,7 @@ description: "Case studies from fintech, payments, travel tech, and platform Saa
                 <a href="#{{ study.id }}">{{ study.title }}</a>
               {% endif %}
             </h2>
-            <p>{{ study.outcome | replace: '\n', '' }}</p>
+            <p>{{ study.summary }}</p>
             {% if study.page %}
               <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
             {% else %}
