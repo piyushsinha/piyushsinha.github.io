@@ -91,24 +91,25 @@ description: "Director/VP-level product and experience leader with 14 years acro
     <h2>Selected case studies</h2>
     <hr class="separator separator--accent">
     <div class="case-grid">
-      <article class="case-tile reveal">
-        <span class="case-tile__label">Agoda · Research</span>
-        <h3 class="case-tile__title"><a href="{{ '/work/agoda-the-5mm-question/' | relative_url }}">The $5MM question nobody was asking</a></h3>
-        <p>Found in the field, not the dashboard.</p>
-        <a class="case-tile__go" href="{{ '/work/agoda-the-5mm-question/' | relative_url }}">Read case study &rarr;</a>
-      </article>
-      <article class="case-tile reveal">
-        <span class="case-tile__label">Brankas · Open banking</span>
-        <h3 class="case-tile__title"><a href="{{ '/work/' | relative_url }}">Making open banking safe enough to use</a></h3>
-        <p>53% faster from signup to live, across 8+ countries.</p>
-        <a class="case-tile__go" href="{{ '/work/' | relative_url }}">Read case study &rarr;</a>
-      </article>
-      <article class="case-tile reveal">
-        <span class="case-tile__label">Xendit · Payments</span>
-        <h3 class="case-tile__title"><a href="{{ '/work/' | relative_url }}">From 30 days to 14 at sign-up</a></h3>
-        <p>Onboarding rebuilt around the merchant.</p>
-        <a class="case-tile__go" href="{{ '/work/' | relative_url }}">Read case study &rarr;</a>
-      </article>
+      {% assign featured_studies = site.data.case_studies | where: "featured", true | sort: "order" %}
+      {% for study in featured_studies %}
+        <article class="case-tile reveal">
+          <span class="case-tile__label">{{ study.company }}</span>
+          <h3 class="case-tile__title">
+            {% if study.page %}
+              <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
+            {% else %}
+              <a href="{{ '/work/' | relative_url }}#{{ study.id }}">{{ study.title }}</a>
+            {% endif %}
+          </h3>
+          <p>{{ study.summary }}</p>
+          {% if study.page %}
+            <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
+          {% else %}
+            <a class="case-tile__go" href="{{ '/work/' | relative_url }}#{{ study.id }}">View the deck &rarr;</a>
+          {% endif %}
+        </article>
+      {% endfor %}
     </div>
     <p style="margin-top: var(--space-4);"><a href="{{ '/work/' | relative_url }}">See all work &rarr;</a></p>
   </div>
@@ -124,7 +125,7 @@ description: "Director/VP-level product and experience leader with 14 years acro
 </section>
 
 <!-- Where I've worked -->
-<section class="section">
+<section class="section" style="padding-bottom: var(--space-2);">
   <div class="container">
     <h2>Where I've worked, and who I've worked for</h2>
     <hr class="separator separator--accent">
@@ -144,8 +145,8 @@ description: "Director/VP-level product and experience leader with 14 years acro
 </section>
 
 <!-- Logos marquee -->
-<section class="logos-section">
-  <div class="container logos-section__header">
+<section class="logos-section" style="padding-top: var(--space-2);">
+  <div class="container logos-section__header" style="margin-bottom: var(--space-3);">
     <p class="logos-section__label">Companies and clients I've worked with</p>
   </div>
   <div class="logos-marquee">
@@ -221,7 +222,7 @@ description: "Director/VP-level product and experience leader with 14 years acro
   <div class="container">
     <h2>What is complexity costing you?</h2>
     <hr class="separator separator--accent">
-    <p>I'm exploring Director and VP roles — the kind where someone hands me something tangled and expensive, and asks for simple.</p>
+    <p>Somewhere in your product, your team, or your customers' trust, complexity is quietly costing you customers and cash. That's the problem I'm best at — and I'm exploring Director and VP roles where it's the job.</p>
     <a href="{{ '/connect/' | relative_url }}" class="btn btn--primary">Let's talk</a>
   </div>
 </section>
