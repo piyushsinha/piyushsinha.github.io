@@ -1,0 +1,200 @@
+/* ============================================
+   v2 ADDITIONS — append to assets/css/styles.css
+   Uses existing custom properties only.
+   ============================================ */
+
+/* --- Hero: proof strip + status callout --- */
+.hero__proof {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent-metric);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.hero__status {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-caption);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-top: var(--space-2);
+}
+
+/* --- Capability tiles --- */
+.cap-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.cap-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.cap-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-text-muted);
+}
+
+.cap-card__title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+
+.cap-card p {
+  margin: 0;
+  font-size: var(--font-size-caption);
+}
+
+/* --- Metrics: 3-up variant (6 cards) --- */
+@media (min-width: 768px) {
+  .metrics-grid--three { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Case study tiles --- */
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .case-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.case-tile {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.case-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-text-muted);
+}
+
+.case-tile__label {
+  display: block;
+  font-size: var(--font-size-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-action);
+  margin-bottom: var(--space-1);
+}
+
+.case-tile__title {
+  font-size: var(--font-size-h3);
+  margin: 0 0 var(--space-1);
+}
+
+.case-tile__title a {
+  color: var(--color-text-primary) !important;
+  text-decoration: none !important;
+}
+
+.case-tile__title a:hover {
+  color: var(--color-accent-action) !important;
+}
+
+.case-tile p {
+  font-size: var(--font-size-caption);
+  margin: 0 0 var(--space-2);
+}
+
+.case-tile__go {
+  font-size: var(--font-size-caption);
+  color: var(--color-accent-action) !important;
+  text-decoration: none !important;
+}
+
+/* --- Statement / belief section --- */
+.statement {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statement__quote {
+  font-family: var(--font-display);
+  font-weight: var(--weight-light);
+  font-size: var(--font-size-h2);
+  line-height: var(--leading-tight);
+  color: var(--color-text-primary);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+/* --- Trust tiers --- */
+.trust-tier { margin-bottom: var(--space-3); }
+
+.trust-tier__label {
+  font-size: var(--font-size-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-1);
+}
+
+.trust-tier__names {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-medium);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* --- Case study article page --- */
+.case-study__meta {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.case-study__section-title {
+  font-size: var(--font-size-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-metric);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.case-study__stat {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent-metric);
+}
+
+.case-study__tags { margin-top: var(--space-4); }
+
+/* --- Reveal on scroll --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
