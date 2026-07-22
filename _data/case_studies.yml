@@ -7,8 +7,11 @@
 - id: agoda-5mm
   type: case-study
   order: 1
+  featured: true
+  page: "/work/agoda-the-5mm-question/"
   company: "Agoda"
   title: "The $5MM Question Nobody Was Asking"
+  summary: "Found in the field, not the dashboard — $5MM a year in savings."
   outcome: |
     <strong>Before:</strong> Hotel partners were calling support because the dashboard made no sense to the people actually running hotels.<br>
     <strong>The bet:</strong> Go watch them use it in their own properties, not in a conference room.<br>
@@ -19,8 +22,10 @@
 - id: xendit-golive
   type: case-study
   order: 2
+  featured: true
   company: "Xendit"
   title: "From 30 Days to 14: Rebuilding Trust at Sign-Up"
+  summary: "Onboarding rebuilt around the merchant. Live in 14 days, down from 30."
   outcome: |
     <strong>Before:</strong> Merchants were abandoning sign-up before they ever processed a single payment. A 30-day onboarding target was already considered ambitious.<br>
     <strong>The bet:</strong> Tear down the process and rebuild it around the merchant, not the back office.<br>
@@ -28,11 +33,26 @@
   domain: "Payments Onboarding · Process Design"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRErYT8qrvW40rL6ya5Avafhuw1YicQFKvW0kJKpTzKmDPTPJAfCl8opQskXruWZkdaDiGWpiCHVzMR/pubembed?start=false&loop=false&delayms=60000"
 
-- id: agoda-hidden-behaviors
+- id: brankas-tap
   type: case-study
   order: 3
+  featured: true
+  company: "Brankas"
+  title: "Making Open Banking Safe Enough to Use"
+  summary: "53% faster from signup to live and transacting, across 8+ countries."
+  outcome: |
+    <strong>Before:</strong> Open banking asks people to connect their bank account to a startup. That's a hard sell anywhere — let alone across 8+ countries, languages, and banking cultures.<br>
+    <strong>The bet:</strong> Design the moment of trust as carefully as the moment of payment.<br>
+    <strong>The proof:</strong> Customers reached live and transacting 53% faster, end to end.
+  domain: "B2B2C · Payment Authentication · Trust Design"
+  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vT5jkJZ3ryA4JoAwvZ-EQxXENtL2H2x8C93gyDJx-zSr4jM2LaeBRO2RRTjeDqH4arnfmyhplJaR8-0/pubembed?start=false&loop=false&delayms=60000"
+
+- id: agoda-hidden-behaviors
+  type: case-study
+  order: 4
   company: "Agoda"
   title: "What Users Do When They Think No One's Watching"
+  summary: "A new method built to catch what people do, not what they say."
   outcome: |
     <strong>Before:</strong> Standard research methods kept missing what people actually did, as opposed to what they said they did.<br>
     <strong>The bet:</strong> Build a new methodology designed to catch behavior nobody would think to mention in an interview.<br>
@@ -40,24 +60,12 @@
   domain: "UX Research · Behavioral Methods"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vSlU52qvIOi4t4z5Of7baZjEa7WHTaVTJHDxqlgo5iCukqvpNezW5lm-gklpjAeMAcT6-FY9lFVwsH_/pubembed?start=false&loop=false&delayms=60000"
 
-
-- id: brankas-tap
-  type: case-study
-  order: 4
-  company: "Brankas"
-  title: "Teaching 15 Countries to Trust a New Kind of Bank"
-  outcome: |
-    <strong>Before:</strong> Open finance asks people to trust a startup with their bank login. That's a hard sell anywhere — let alone across 15 different countries, languages, and banking cultures.<br>
-    <strong>The bet:</strong> Design the moment of trust as carefully as the moment of payment.<br>
-    <strong>The proof:</strong> A 53% improvement in onboarding completion, across every market.
-  domain: "B2B2C · Payment Authentication · Trust Design"
-  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vT5jkJZ3ryA4JoAwvZ-EQxXENtL2H2x8C93gyDJx-zSr4jM2LaeBRO2RRTjeDqH4arnfmyhplJaR8-0/pubembed?start=false&loop=false&delayms=60000"
-
 - id: agoda-booking-form
   type: case-study
   order: 5
   company: "Agoda"
   title: "The Booking Form That Never Stopped Improving"
+  summary: "An always-on experimentation programme instead of a one-off redesign."
   outcome: |
     <strong>Before:</strong> One redesign, however good, only gets you one improvement. Conversion needed to keep climbing, not plateau.<br>
     <strong>The bet:</strong> Build a systematic, always-on experimentation program instead of a one-time fix.<br>
@@ -70,36 +78,37 @@
   order: 6
   company: "Agoda"
   title: "Turning a 5,000-Person Company Into Researchers"
+  summary: "100% of customer-facing teams adopted human-centred design in four months."
   outcome: |
-    <strong>Before:</strong> Product decisions across a Fortune 100-scale company were made on opinion, not evidence — because research wasn't part of how anyone worked.<br>
+    <strong>Before:</strong> Product decisions across a 5,000-person company were made on opinion, not evidence — because research wasn't part of how anyone worked.<br>
     <strong>The bet:</strong> Train the company, not just the team — from VPs to individual PMs and designers.<br>
     <strong>The proof:</strong> 100% of customer-facing teams adopted human-centered design within four months.
   domain: "Org Culture Change · Design Leadership"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRhuKEwxTkW6zWcuVZvlogK4BLAbHjPaZ0I7OMM0MLgY1zV1Mx8tVjOUSqnEWywK542w0_vXDjtoZA7/pubembed?start=false&loop=false&delayms=60000"
-  
 
 - id: xendit-xendesign
   type: case-study
   order: 7
   company: "Xendit"
   title: "One Design System, Four Companies, Half the Cost"
+  summary: "One system across four group companies — 50% lower build cost."
   outcome: |
     <strong>Before:</strong> Four companies under one group, four different design languages, and four times the engineering cost to ship anything.<br>
     <strong>The bet:</strong> Build one design system flexible enough for all four brands — in three months.<br>
     <strong>The proof:</strong> A 50% reduction in design and engineering cost across the group.
   domain: "Design Systems · Multi-brand Architecture"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRKc0QnweoGn8ZlZKYKBim4CsI9I7cmmhfggYzS0MgrG6DiMJ3SXvDTWXUOlkBbLsGKlci77NRrg7im/pubembed?start=false&loop=false&delayms=60000"
-  
 
 - id: uxhh-bangkok
   type: case-study
   order: 8
   company: "UX Happy Hour Bangkok"
   title: "The Bar Where Bangkok's Designers Actually Talk to Each Other"
+  summary: "1,700+ members over 10 years — one of SEA's longest-running design communities."
   outcome: |
     <strong>Before:</strong> Bangkok had plenty of talented designers and researchers — and almost no way for them to find each other.<br>
     <strong>The bet:</strong> Start a monthly bar night. Keep showing up, even when it's just a handful of people.<br>
-    <strong>The proof:</strong> 1,700+ members and counting, after 10 years — one of Southeast Asia's longest-running design communities.
+    <strong>The proof:</strong> 1,700+ members after 10 years — one of Southeast Asia's longest-running design communities.
   domain: "Community Building · Design Culture"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vQfFsA1FMajxyT1LlIuzNe_fv8nQ_3NsbEdgcCnxJarObtznCvxGOKA-d_MNQ0AoyJjzTjZTlSV1Zsp/pubembed?start=false&loop=false&delayms=60000"
 
