@@ -221,3 +221,28 @@
 .connect-availability p:last-child { margin-bottom: 0; }
 .connect-list__item { line-height: 1.7; }
 .connect-list__item strong { color: var(--color-text-primary); }
+
+/* --- What I believe: principle grid --- */
+.beliefs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+@media (min-width: 768px) {
+  .beliefs { grid-template-columns: repeat(3, 1fr); }
+}
+.belief__title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-light);
+  font-size: var(--font-size-h3);
+  line-height: var(--leading-tight);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+.belief p {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
