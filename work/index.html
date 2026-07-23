@@ -7,110 +7,48 @@ description: "Case studies from fintech, payments, travel tech, and platform Saa
 
 <section class="section">
   <div class="container">
+
     <!-- Page Intro -->
     <div class="work-intro">
       <h1>Selected case studies.</h1>
       <hr class="separator separator--accent">
-      <p>The business challenge, how I led, and what it changed. A lot of my work can't be shared publicly due to NDA constraints — get in touch to discuss specific engagements.</p>
+      <p>The business challenge, how I led, and what it changed. Each opens a full write-up. A lot of my work can't be shared publicly due to NDA constraints — get in touch to discuss specific engagements.</p>
     </div>
 
-    {% assign intro_items = site.data.case_studies | where: "type", "intro" %}
     {% assign case_study_items = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
-    {% assign talk_items = site.data.case_studies | where: "type", "talk" | sort: "order" %}
+    {% assign intro_items = site.data.case_studies | where: "type", "intro" %}
 
     <!-- Case Study Cards -->
-    {% if case_study_items.size > 0 %}
-      <div class="case-grid case-grid--two" style="margin-top: var(--space-5);">
-        {% for study in case_study_items %}
-          <article class="case-tile">
-            <span class="case-tile__label">{{ study.company }}{% if study.page %} · Full case study{% endif %}</span>
-            <h2 class="case-tile__title">
-              {% if study.page %}
-                <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
-              {% else %}
-                <a href="#{{ study.id }}">{{ study.title }}</a>
-              {% endif %}
-            </h2>
-            <p>{{ study.summary }}</p>
+    <div class="case-grid case-grid--two" style="margin-top: var(--space-5);">
+      {% for study in case_study_items %}
+        <article class="case-tile">
+          <span class="case-tile__label">{{ study.company }}</span>
+          <h2 class="case-tile__title">
             {% if study.page %}
-              <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
+              <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
             {% else %}
-              <a class="case-tile__go" href="#{{ study.id }}">View the deck &rarr;</a>
+              {{ study.title }}
             {% endif %}
-          </article>
-        {% endfor %}
-      </div>
-    {% endif %}
+          </h2>
+          <p>{{ study.summary }}</p>
+          {% if study.page %}
+            <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
 
-    <!-- Introduction Decks -->
+    <!-- Leadership Introduction deck -->
     {% for item in intro_items %}
-      <div class="work-section-label" style="margin-top: var(--space-6);">
-        <span class="label">Introduction</span>
+      <div class="work-section-label" style="margin-top: var(--space-7);">
+        <span class="label">Leadership Introduction</span>
       </div>
       <h2 style="margin-bottom: var(--space-3);">{{ item.title }}</h2>
-      <div id="{{ item.id }}" class="embed-frame embed-frame--tall" style="margin-bottom: var(--space-6);">
+      <p>{{ item.subtitle }}</p>
+      <div class="embed-frame embed-frame--tall" style="margin-top: var(--space-3);">
         <iframe src="{{ item.embed_url }}" loading="lazy" allowfullscreen title="{{ item.title | escape }}"></iframe>
       </div>
     {% endfor %}
-
-    <!-- Case Study Decks -->
-    {% if case_study_items.size > 0 %}
-      <div class="work-section-label" style="margin-top: var(--space-6);">
-        <span class="label">Case Studies</span>
-      </div>
-
-      {% for study in case_study_items %}
-        <div class="case-study-card" id="{{ study.id }}">
-          <div class="case-study-card__header">
-            <span class="label case-study-card__company">{{ study.company }}</span>
-            <h3 class="case-study-card__title">{{ study.title }}</h3>
-            <p class="case-study-card__outcome">{{ study.outcome | replace: '\n', '' }}</p>
-            <div class="pill-list case-study-card__domain">
-              {% assign domains = study.domain | split: "·" %}
-              {% for d in domains %}
-                <span class="pill">{{ d | strip }}</span>
-              {% endfor %}
-            </div>
-            {% if study.page %}
-              <p style="margin-top: var(--space-2);"><a class="case-tile__go" href="{{ study.page | relative_url }}">Read the full written case study &rarr;</a></p>
-            {% endif %}
-          </div>
-          <div class="embed-frame">
-            <iframe src="{{ study.embed_url }}" loading="lazy" allowfullscreen title="{{ study.title | escape }}"></iframe>
-          </div>
-        </div>
-      {% endfor %}
-    {% endif %}
-
-    <!-- Talk Cards -->
-    {% if talk_items.size > 0 %}
-      <div class="work-section-label" style="margin-top: var(--space-6);">
-        <span class="label">Talks &amp; Presentations</span>
-      </div>
-
-      {% for talk in talk_items %}
-        <div class="case-study-card" id="{{ talk.id }}">
-          <div class="case-study-card__header">
-            <span class="label case-study-card__company">{{ talk.company }}</span>
-            <h3 class="case-study-card__title">{{ talk.title }}</h3>
-            {% if talk.outcome %}
-              <p class="case-study-card__outcome">{{ talk.outcome }}</p>
-            {% endif %}
-            {% if talk.domain %}
-              <div class="pill-list case-study-card__domain">
-                {% assign domains = talk.domain | split: "·" %}
-                {% for d in domains %}
-                  <span class="pill">{{ d | strip }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-          <div class="embed-frame">
-            <iframe src="{{ talk.embed_url }}" loading="lazy" allowfullscreen title="{{ talk.title | escape }}"></iframe>
-          </div>
-        </div>
-      {% endfor %}
-    {% endif %}
 
   </div>
 </section>
