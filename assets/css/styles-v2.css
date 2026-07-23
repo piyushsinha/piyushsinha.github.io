@@ -95,7 +95,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: var(--weight-medium);
-  color: var(--color-accent-action);
+  color: var(--color-accent-metric);
   margin-bottom: var(--space-1);
 }
 
@@ -147,7 +147,8 @@
   font-size: var(--font-size-caption);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-metric);
   margin: 0 0 var(--space-1);
 }
 
