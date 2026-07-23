@@ -95,7 +95,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: var(--weight-medium);
-  color: var(--color-accent-action);
+  color: var(--color-accent-metric);
   margin-bottom: var(--space-1);
 }
 
@@ -147,7 +147,8 @@
   font-size: var(--font-size-caption);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-metric);
   margin: 0 0 var(--space-1);
 }
 
@@ -251,4 +252,26 @@
   color: var(--color-text-secondary);
   line-height: 1.65;
   margin: 0;
+}
+
+/* --- Hero rebalance: single left-aligned column; portrait anchored top-left --- */
+@media (min-width: 768px) {
+  .hero__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+.hero__portrait {
+  width: 88px;
+  height: 88px;
+}
+@media (max-width: 767px) {
+  .hero__portrait { align-self: flex-start; }
+}
+
+/* --- Accent rule aligns left under its heading (hr defaults to margin-inline:auto = centred) --- */
+.separator--accent {
+  margin-left: 0;
+  margin-right: auto;
 }
