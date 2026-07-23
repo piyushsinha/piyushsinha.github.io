@@ -240,10 +240,8 @@
   padding: var(--space-4);
 }
 .belief__title {
-  font-family: var(--font-display);
-  font-weight: var(--weight-light);
   font-size: var(--font-size-h3);
-  line-height: var(--leading-tight);
+  font-weight: var(--weight-medium);
   color: var(--color-text-primary);
   margin: 0 0 var(--space-2);
 }
