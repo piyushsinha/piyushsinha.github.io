@@ -23,6 +23,7 @@
   type: case-study
   order: 2
   featured: true
+  page: "/work/xendit-go-live/"
   company: "Xendit"
   title: "From 30 Days to 14: Rebuilding Trust at Sign-Up"
   summary: "Onboarding rebuilt around the merchant. Live in 14 days, down from 30."
@@ -37,51 +38,55 @@
   type: case-study
   order: 3
   featured: true
+  page: "/work/brankas-open-banking-trust/"
   company: "Brankas"
   title: "Making Open Banking Safe Enough to Use"
-  summary: "Under 2% drop-off at the moment people connect their bank."
+  summary: "Trust designed into bank authentication — cutting 10%+ drop-off toward under 2%."
   outcome: |
-    <strong>The problem:</strong> Open banking asks people to give a startup access to their bank account. The authentication moment is where that trust is either won or lost — and where users walk away.<br>
-    <strong>The approach:</strong> Design the moment of trust as carefully as the moment of payment, across 8+ countries, languages and banking cultures.<br>
-    <strong>The outcome:</strong> Under 2% drop-off at authentication — and the judgment to call for sunsetting a product the market wasn't ready for.
-  domain: "B2B2C · Payment Authentication · Trust Design"
+    <strong>The problem:</strong> Over 10% of users dropped off at the open-banking authentication screen — an unfamiliar third-party interface at the moment they hand over bank access.<br>
+    <strong>The approach:</strong> Root-cause research, then bank-theme the screen so it reads as a natural extension of the bank; target drop-off under 2%.<br>
+    <strong>The outcome:</strong> A statistically significant reduction in trust-driven exits — and the judgment to pause a product the market's infrastructure couldn't yet support.
+  domain: "Open Finance · Payment Authentication · Trust Design"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vT5jkJZ3ryA4JoAwvZ-EQxXENtL2H2x8C93gyDJx-zSr4jM2LaeBRO2RRTjeDqH4arnfmyhplJaR8-0/pubembed?start=false&loop=false&delayms=60000"
 
 - id: agoda-hidden-behaviors
   type: case-study
   order: 4
+  page: "/work/agoda-hidden-behaviors/"
   company: "Agoda"
   title: "What Users Do When They Think No One's Watching"
-  summary: "A new method built to catch what people do, not what they say."
+  summary: "A non-verbal, emotion-based method built to catch what people do, not what they say."
   outcome: |
-    <strong>The problem:</strong> Standard research methods kept missing what people actually did, as opposed to what they said they did.<br>
-    <strong>The approach:</strong> Build a new methodology designed to catch behaviour nobody would think to mention in an interview.<br>
-    <strong>The outcome:</strong> Hidden behaviours surfaced that reshaped how the team approached research company-wide.
+    <strong>The problem:</strong> Standard interviews couldn't explain what made a hotel photo convert — people had strong reactions but no words for them.<br>
+    <strong>The approach:</strong> Pause the study and design a non-verbal, emotion-based method (the Premo tool) across controlled photo variations.<br>
+    <strong>The outcome:</strong> Precise, cross-cultural criteria across 14 markets — an evidence-based photo spec tied to booking intent.
   domain: "UX Research · Behavioral Methods"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vSlU52qvIOi4t4z5Of7baZjEa7WHTaVTJHDxqlgo5iCukqvpNezW5lm-gklpjAeMAcT6-FY9lFVwsH_/pubembed?start=false&loop=false&delayms=60000"
 
 - id: agoda-booking-form
   type: case-study
   order: 5
+  page: "/work/agoda-booking-form/"
   company: "Agoda"
   title: "The Booking Form That Never Stopped Improving"
-  summary: "An always-on experimentation programme instead of a one-off redesign."
+  summary: "Research-grounded A/B experiments for Incremental Bookings Per Day — four wins, one instructive loss."
   outcome: |
-    <strong>The problem:</strong> One redesign, however good, only gets you one improvement. Conversion needed to keep climbing, not plateau.<br>
-    <strong>The approach:</strong> Build a systematic, always-on experimentation programme instead of a one-time fix.<br>
-    <strong>The outcome:</strong> Continuous conversion gains, quarter over quarter.
+    <strong>The problem:</strong> A booking form designed without UX was dragging conversion — buried fields, a fragmented summary, 35 unorganised payment options.<br>
+    <strong>The approach:</strong> Ground every experiment hypothesis in mixed-methods research, sequenced with dual-path variants.<br>
+    <strong>The outcome:</strong> Four sequential experiment wins on Incremental Bookings Per Day — and a research-to-experiment loop that never stops.
   domain: "Consumer Product · Experimentation"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vTngwLbkSj2g7-n2KLh7yiACsAfqXFCp2F6wI-zqpdkwdkDSxoCMJtLphqvvGIXMndkdySJ8O0BrkRf/pubembed?start=false&loop=false&delayms=60000"
 
 - id: agoda-hcd
   type: case-study
   order: 6
+  page: "/work/agoda-human-centered-design/"
   company: "Agoda"
   title: "Turning a 5,000-Person Company Into Researchers"
   summary: "100% of customer-facing teams adopted human-centred design in four months."
   outcome: |
-    <strong>The problem:</strong> Product decisions across a 5,000-person company were made on opinion, not evidence — because research wasn't part of how anyone worked.<br>
-    <strong>The approach:</strong> Train the company, not just the team — from VPs to individual PMs and designers.<br>
+    <strong>The problem:</strong> Product decisions across a 5,000-person company were made on opinion, not evidence — research wasn't part of how anyone worked.<br>
+    <strong>The approach:</strong> A three-phase change strategy — start lean, show results, scale by organic adoption, enforce only for holdouts.<br>
     <strong>The outcome:</strong> 100% of customer-facing teams adopted human-centred design within four months.
   domain: "Org Culture Change · Design Leadership"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRhuKEwxTkW6zWcuVZvlogK4BLAbHjPaZ0I7OMM0MLgY1zV1Mx8tVjOUSqnEWywK542w0_vXDjtoZA7/pubembed?start=false&loop=false&delayms=60000"
@@ -89,33 +94,27 @@
 - id: xendit-xendesign
   type: case-study
   order: 7
+  page: "/work/xendit-design-system/"
   company: "Xendit"
   title: "One Design System, Four Companies, Half the Cost"
-  summary: "One system across four group companies — 50% lower build cost."
+  summary: "One system across four group companies — 50% lower build cost, live in three months."
   outcome: |
-    <strong>The problem:</strong> Four companies under one group, four different design languages, and four times the engineering cost to ship anything.<br>
-    <strong>The approach:</strong> Build one design system flexible enough for all four brands — in three months.<br>
-    <strong>The outcome:</strong> A 50% reduction in design and engineering cost across the group.
+    <strong>The problem:</strong> Four companies under one group, four design languages, and four times the cost to ship anything.<br>
+    <strong>The approach:</strong> One design system with matched design and code and an abstracted brand layer, rolled out incrementally alongside features.<br>
+    <strong>The outcome:</strong> Live across all four companies in three months — a 50% reduction in design and engineering cost.
   domain: "Design Systems · Multi-brand Architecture"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vRKc0QnweoGn8ZlZKYKBim4CsI9I7cmmhfggYzS0MgrG6DiMJ3SXvDTWXUOlkBbLsGKlci77NRrg7im/pubembed?start=false&loop=false&delayms=60000"
 
 - id: uxhh-bangkok
   type: case-study
   order: 8
+  page: "/work/ux-happy-hour-bangkok/"
   company: "UX Happy Hour Bangkok"
   title: "The Bar Where Bangkok's Designers Actually Talk to Each Other"
   summary: "1,700+ members over 10 years — one of SEA's longest-running design communities."
   outcome: |
     <strong>The problem:</strong> Bangkok had plenty of talented designers and researchers — and almost no way for them to find each other.<br>
-    <strong>The approach:</strong> Start a monthly bar night. Keep showing up, even when it's just a handful of people.<br>
-    <strong>The outcome:</strong> 1,700+ members after 10 years — one of Southeast Asia's longest-running design communities.
+    <strong>The approach:</strong> Treat a monthly meetup as a product; adapt it to local culture; keep showing up.<br>
+    <strong>The outcome:</strong> 1,700+ members over 10 years — one of Southeast Asia's longest-running design communities.
   domain: "Community Building · Design Culture"
   embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vQfFsA1FMajxyT1LlIuzNe_fv8nQ_3NsbEdgcCnxJarObtznCvxGOKA-d_MNQ0AoyJjzTjZTlSV1Zsp/pubembed?start=false&loop=false&delayms=60000"
-
-- id: adplist-keynote
-  type: talk
-  company: "ADP List Bangkok Launch"
-  title: "Keynote Talk: Employee Inc - Build your career like a business"
-  subtitle: "My keynote talk at the ADP List Bangkok inaugural event"
-  domain: "Career overview, mentorship"
-  embed_url: "https://docs.google.com/presentation/d/e/2PACX-1vSn3ku19JKqP_mu1pOpaOgS2GIJIf-Y3nBU6xcuRVn8g4p775fck1IShwyOxWN2uUsZlYu-RnO-jy3J/pubembed?start=false&loop=false&delayms=6000"
