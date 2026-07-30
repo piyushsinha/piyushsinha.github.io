@@ -1,0 +1,263 @@
+---
+layout: default
+title: "Piyush Sinha - Product & Experience Leader | Fintech · Payments · Travel · Platform SaaS"
+permalink: /
+description: "Director/VP-level product and experience leader with 14+ years across fintech, payments, travel, and platform SaaS. $5M saved, 53% better onboarding, teams and design functions built from zero."
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero__content">
+    <div class="hero__text">
+      <p class="label">Product &amp; experience leader · Fintech · Payments · Travel · Platform SaaS</p>
+      <img class="hero__portrait" fetchpriority="high" decoding="async" width="160" height="160" src="{{ '/assets/images/piyush-portrait.jpeg' | relative_url }}" alt="Piyush Sinha portrait photo">
+      <h1 class="hero__name">Complexity is expensive.<br>I make it simple.</h1>
+      <p class="hero__tagline">For 14+ years, companies have handed me tangled products, broken teams, and lost trust — and I've turned all three into growth and savings.</p>
+      <p class="hero__proof">$5M saved &nbsp;·&nbsp; 53% faster to first transaction &nbsp;·&nbsp; launches cut from 30 days to 14</p>
+      <div class="hero__status">
+        <strong class="text-highlight">Open to Director / VP roles</strong> — product, experience, design-org, or transformation. Across APAC, the EU, and the UAE — or fully remote.
+      </div>
+      <div class="hero__ctas">
+        <a href="{{ '/work/' | relative_url }}" class="btn btn--primary">View my work</a>
+        <a href="{{ '/connect/' | relative_url }}" class="btn btn--ghost">Let's talk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Capabilities -->
+<section class="section">
+  <div class="container">
+    <h2>What I'm handed — and what I build</h2>
+    <hr class="separator separator--accent">
+    <div class="cap-grid">
+      <div class="cap-card reveal">
+        <h3 class="cap-card__title">Transformation &amp; turnarounds</h3>
+        <p>Fix the product, the team, and the trust.</p>
+      </div>
+      <div class="cap-card reveal">
+        <h3 class="cap-card__title">Product &amp; platform strategy</h3>
+        <p>Turn complex platforms into coherent products.</p>
+      </div>
+      <div class="cap-card reveal">
+        <h3 class="cap-card__title">Teams &amp; leaders from zero</h3>
+        <p>Built the function — then the people who now lead it.</p>
+      </div>
+      <div class="cap-card reveal">
+        <h3 class="cap-card__title">AI-native operating models</h3>
+        <p>Evaluated AI tools across six workflows, then rolled them out to the team with best practices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Metrics -->
+<section class="section">
+  <div class="container">
+    <h2>Proof, not adjectives</h2>
+    <hr class="separator separator--accent">
+    <div class="metrics-grid metrics-grid--three">
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">$5MM</span>
+        <span class="metric-card__label">saved a year at Agoda — research that redirected product spend</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">53%</span>
+        <span class="metric-card__label">faster from signup to live and transacting at Brankas, across 8+ countries</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">14 days</span>
+        <span class="metric-card__label">for customers to go live at Xendit — down from 30 days</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">50%</span>
+        <span class="metric-card__label">lower design &amp; engineering cost across the Xendit group — one system, four companies</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">18+</span>
+        <span class="metric-card__label">person design department led at Appsynth, as manager of managers</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number metric-card__number">1,700+</span>
+        <span class="metric-card__label">designers in UX Happy Hour, the community I founded and ran for 10 years</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Selected case studies -->
+<section class="section">
+  <div class="container">
+    <h2>Selected case studies</h2>
+    <hr class="separator separator--accent">
+    <div class="case-grid">
+      {% assign featured_studies = site.data.case_studies | where: "featured", true | sort: "order" %}
+      {% for study in featured_studies %}
+        <article class="case-tile reveal">
+          <span class="case-tile__label">{{ study.company }}</span>
+          <h3 class="case-tile__title">
+            {% if study.page %}
+              <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
+            {% else %}
+              <a href="{{ '/work/' | relative_url }}#{{ study.id }}">{{ study.title }}</a>
+            {% endif %}
+          </h3>
+          <p>{{ study.summary }}</p>
+          {% if study.page %}
+            <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
+          {% else %}
+            <a class="case-tile__go" href="{{ '/work/' | relative_url }}#{{ study.id }}">View the deck &rarr;</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+    <p style="margin-top: var(--space-4);"><a href="{{ '/work/' | relative_url }}">See all work &rarr;</a></p>
+  </div>
+</section>
+
+<!-- What I believe -->
+<section class="section">
+  <div class="container">
+    <h2>What I believe</h2>
+    <hr class="separator separator--accent">
+    <div class="beliefs">
+      <div class="belief">
+        <h3 class="belief__title">Subtraction is the hard part.</h3>
+        <p>Anyone can add — features, headcount, process. The expensive, valuable work is deciding what to remove, and having the candour to say so. Knowing when <em>not</em> to build matters as much as knowing how.</p>
+      </div>
+      <div class="belief">
+        <h3 class="belief__title">Reason from reality, not the room.</h3>
+        <p>The loudest opinion in the meeting isn't evidence. Go to where the truth actually is — the field, the data, the customer — and reason up from first principles, even when it means throwing out the plan.</p>
+      </div>
+      <div class="belief">
+        <h3 class="belief__title">Build leverage, not output.</h3>
+        <p>A team's job isn't to ship more; it's to build the systems and the people — design systems, research infrastructure, AI-native workflows — that make the next thing easier. Leverage compounds; effort doesn't.</p>
+      </div>
+    </div>
+    <p style="margin-top: var(--space-4);"><a href="{{ '/thinking/' | relative_url }}">More thinking &rarr;</a></p>
+  </div>
+</section>
+
+<!-- Where I've worked -->
+<section class="section" style="padding-bottom: var(--space-2);">
+  <div class="container">
+    <h2>Where I've worked, and who I've worked for</h2>
+    <hr class="separator separator--accent">
+    <div class="trust-tier">
+      <p class="trust-tier__label">Led product &amp; design at</p>
+      <p class="trust-tier__names">Agoda (Booking Holdings, NASDAQ: BKNG) · Xendit (YC S15) · Brankas · PouchNATION</p>
+    </div>
+    <div class="trust-tier">
+      <p class="trust-tier__label">Consulting &amp; agency clients</p>
+      <p class="trust-tier__names">Monetary Authority of Singapore · AFIN · TTB · Thanachart · TMB · Nissan · 7-Eleven · SCB Asset Management · Bangchak · Finansia · Aionex</p>
+    </div>
+    <div class="trust-tier">
+      <p class="trust-tier__label">Programmes</p>
+      <p class="trust-tier__names">Techstars '13, Chicago</p>
+    </div>
+  </div>
+</section>
+
+<!-- Logos marquee -->
+<section class="logos-section" style="padding-top: var(--space-2);">
+  <div class="container logos-section__header" style="margin-bottom: var(--space-3);">
+    <p class="logos-section__label">Companies and clients I've worked with</p>
+  </div>
+  <div class="logos-marquee">
+    <div class="logos-row__track">
+      <div class="logo-box"><img src="{{ '/assets/images/logos/agoda.svg' | relative_url }}" alt="Agoda" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/xendit.svg' | relative_url }}" alt="Xendit" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/brankas.svg' | relative_url }}" alt="Brankas" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/mas.svg' | relative_url }}" alt="MAS" loading="lazy"></div>
+      <div class="logo-box logo-box--wide"><img src="{{ '/assets/images/logos/techstars.svg' | relative_url }}" alt="Techstars" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/apix.svg' | relative_url }}" alt="APIX" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/tmb.svg' | relative_url }}" alt="TMB Bank" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/thanachart.svg' | relative_url }}" alt="Thanachart Bank" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/ttb.svg' | relative_url }}" alt="TTB" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/pounchnation.svg' | relative_url }}" alt="PouchNATION" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/appsynth.svg' | relative_url }}" alt="AppSynth" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/7-11.svg' | relative_url }}" alt="7-Eleven" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/scb.svg' | relative_url }}" alt="SCB" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/bangchak.svg' | relative_url }}" alt="Bangchak" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/nissan.svg' | relative_url }}" alt="Nissan" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/finansia.svg' | relative_url }}" alt="Finansia" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/aionex.svg' | relative_url }}" alt="AIONEX" loading="lazy"></div>
+      <div class="logo-box logo-box--wide"><img src="{{ '/assets/images/logos/simplerelevance.svg' | relative_url }}" alt="Simple Relevance" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/edgeonemedical.svg' | relative_url }}" alt="Edge One Medical" loading="lazy"></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="logo-box"><img src="{{ '/assets/images/logos/agoda.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/xendit.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/brankas.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/mas.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box logo-box--wide"><img src="{{ '/assets/images/logos/techstars.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/apix.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/tmb.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/thanachart.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/ttb.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/pounchnation.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/appsynth.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/7-11.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/scb.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/bangchak.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/nissan.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/finansia.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/aionex.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box logo-box--wide"><img src="{{ '/assets/images/logos/simplerelevance.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="logo-box"><img src="{{ '/assets/images/logos/edgeonemedical.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <h2>What people say</h2>
+    <hr class="separator separator--accent">
+    <div class="testimonials-grid">
+      {% for testimonial in site.data.testimonials %}
+        <div class="testimonial-card">
+          <blockquote class="testimonial-card__quote">
+            <p>{{ testimonial.quote }}</p>
+          </blockquote>
+          <div class="testimonial-card__attribution">
+            <strong>{{ testimonial.name }}</strong><br>
+            {{ testimonial.role }}<br>
+            <span class="text-muted">{{ testimonial.context }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <p style="margin-top: var(--space-4);"><a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">View all recommendations on my LinkedIn profile &rarr;</a></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <h2>What is complexity costing you?</h2>
+    <hr class="separator separator--accent">
+    <p>Somewhere in your product, your team, or your customers' trust, complexity is quietly costing you customers and cash. That's the problem I'm best at — and I'm exploring Director and VP roles where it's the job.</p>
+    <a href="{{ '/connect/' | relative_url }}" class="btn btn--primary">Let's talk</a>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          setTimeout(function () { el.classList.add('is-visible'); }, i * 70);
+          io.unobserve(el);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>

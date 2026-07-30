@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main id="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+
+  <script>
+    // Nav scroll behavior: solid background on scroll
+    (function() {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+
+      function onScroll() {
+        if (window.scrollY > 10) {
+          header.classList.add('site-header--scrolled');
+        } else {
+          header.classList.remove('site-header--scrolled');
+        }
+      }
+
+      // Throttle scroll events
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            onScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Initial check
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

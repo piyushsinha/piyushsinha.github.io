@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav__overlay"></div>
+    <ul class="nav__list" role="navigation" aria-label="Main navigation">
+      {% for item in site.nav %}
+        {% assign is_current = false %}
+        {% if item.url == '/' %}
+          {% if page.url == '/' %}
+            {% assign is_current = true %}
+          {% endif %}
+        {% elsif page.url == item.url %}
+          {% assign is_current = true %}
+        {% endif %}
+        <li class="nav__item">
+          <a href="{{ item.url | relative_url }}" class="nav__link{% if is_current %} nav__link--active{% endif %}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>

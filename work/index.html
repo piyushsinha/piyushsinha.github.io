@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Piyush Sinha - Work"
+permalink: /work/
+description: "Case studies from fintech, payments, travel tech, and platform SaaS — the business challenge, how I led, and what changed."
+---
+
+<section class="section">
+  <div class="container">
+
+    <!-- Page Intro -->
+    <div class="work-intro">
+      <h1>Selected case studies.</h1>
+      <hr class="separator separator--accent">
+      <p>The business challenge, how I led, and what it changed. Each opens a full write-up. A lot of my work can't be shared publicly due to NDA constraints — get in touch to discuss specific engagements.</p>
+    </div>
+
+    {% assign case_study_items = site.data.case_studies | where: "type", "case-study" | sort: "order" %}
+    {% assign intro_items = site.data.case_studies | where: "type", "intro" %}
+
+    <!-- Case Study Cards -->
+    <div class="case-grid case-grid--two" style="margin-top: var(--space-5);">
+      {% for study in case_study_items %}
+        <article class="case-tile">
+          <span class="case-tile__label">{{ study.company }}</span>
+          <h2 class="case-tile__title">
+            {% if study.page %}
+              <a href="{{ study.page | relative_url }}">{{ study.title }}</a>
+            {% else %}
+              {{ study.title }}
+            {% endif %}
+          </h2>
+          <p>{{ study.summary }}</p>
+          {% if study.page %}
+            <a class="case-tile__go" href="{{ study.page | relative_url }}">Read case study &rarr;</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+
+    <!-- Leadership Introduction deck -->
+    {% for item in intro_items %}
+      <div class="work-section-label" style="margin-top: var(--space-7);">
+        <span class="label">Leadership Introduction</span>
+      </div>
+      <h2 style="margin-bottom: var(--space-3);">{{ item.title }}</h2>
+      <p>{{ item.subtitle }}</p>
+      <div class="embed-frame embed-frame--tall" style="margin-top: var(--space-3);">
+        <iframe src="{{ item.embed_url }}" loading="lazy" allowfullscreen title="{{ item.title | escape }}"></iframe>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>

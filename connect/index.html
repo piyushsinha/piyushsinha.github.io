@@ -1,0 +1,65 @@
+---
+layout: default
+title: "Piyush Sinha - Connect"
+permalink: /connect/
+description: "Get in touch about Director and VP-level product, experience, design, or transformation roles — across APAC, the EU, the UAE, or fully remote."
+---
+
+<section class="section">
+  <div class="container">
+
+    <!-- Page Header -->
+    <h1>Let's talk.</h1>
+    <hr class="separator separator--accent">
+    <p>If you're hiring for a Director or VP-level product, experience, design, or transformation role — this is the easiest message you'll send all week.</p>
+
+    <!-- Email CTA (assembled in JS so scrapers can't harvest it) -->
+    <div class="connect-email-cta" style="margin-top: var(--space-4);">
+      <a id="email-link" href="#">
+        <span class="email-part">hireme</span><span class="email-at">@</span><span class="email-part">piyushsinha</span><span>.com</span>
+      </a>
+    </div>
+
+    <script>
+      (function () {
+        var link = document.getElementById('email-link');
+        if (!link) return;
+        var parts = link.querySelectorAll('.email-part');
+        var at = link.querySelector('.email-at');
+        var ext = link.querySelector('span:last-child');
+        var email = parts[0].textContent + at.textContent + parts[1].textContent + ext.textContent;
+        link.setAttribute('href', 'mail' + 'to:' + email);
+      })();
+    </script>
+
+    <!-- Availability -->
+    <h2 style="margin-top: var(--space-6);">What I'm looking for</h2>
+    <hr class="separator separator--accent" style="margin-top: var(--space-3);">
+    <div class="connect-availability">
+      <p><strong class="text-highlight">Roles</strong> &nbsp;·&nbsp; Director and VP level — product, experience, design-org, or transformation. Fintech, payments, travel, and platform SaaS.</p>
+      <p><strong class="text-highlight">Location</strong> &nbsp;·&nbsp; Open across APAC, the EU, and the UAE — or fully remote.</p>
+      <p><strong class="text-highlight">Work authorisation</strong> &nbsp;·&nbsp; Indian citizen. Open to visa sponsorship, EOR, or a B2B contract through my company for remote engagements.</p>
+    </div>
+
+    <!-- Where to reach me -->
+    <h2 style="margin-top: var(--space-6);">Where to reach me</h2>
+    <hr class="separator separator--accent" style="margin-top: var(--space-3);">
+    <ul class="connect-list" style="margin-top: var(--space-4);">
+      <li class="connect-list__item">
+        <strong>Work enquiries</strong><br>
+        <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a> — or email me directly using the address above.
+      </li>
+      <li class="connect-list__item">
+        <strong>Mentorship</strong><br>
+        <a href="https://www.linkedin.com/in/itspiyushsinha/" target="_blank" rel="noopener">LinkedIn</a> — I've stepped away from ADPList, but not from mentoring.
+      </li>
+      <li class="connect-list__item">
+        <strong>Talking shop</strong><br>
+        <a href="https://twitter.com/piyushsinha" target="_blank" rel="noopener">X / Twitter</a> or <a href="https://lunchclub.com/?invite_code=piyushs4" target="_blank" rel="noopener">LunchClub</a>.
+      </li>
+    </ul>
+
+    <p class="caption text-muted" style="margin-top: var(--space-4);">One note: I keep Facebook and Instagram for close friends and family only — so please don't send connection requests there. Everything else above, I'd genuinely love to hear from you.</p>
+
+  </div>
+</section>
